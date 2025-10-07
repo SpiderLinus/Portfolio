@@ -1,0 +1,136 @@
+body {
+
+    font-family: sans-serif;
+    text-align: center;
+    background: linear-gradient(70deg, #0f0c29, #302b63, #24243e);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    min-height: 100vh;
+    
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header, nav {
+    
+    width: 100%;
+    background-color: #4d4875;
+    opacity: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+
+#navbtn {
+    background: transparent;
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
+    transition: 0.4s ease;
+   
+    
+
+    
+}
+
+#navbtn.rotated {
+    transform: rotate(90deg);
+}
+
+#navbtn:hover {
+  box-shadow: 0px 0px 50px rgba(2, 2, 96, 0.578);
+  border-radius: 100rem;
+}
+
+#navbtn:active {
+    animation: flow ease 1s;
+}
+
+
+
+#btn {
+    display: flex;
+    background-color: transparent;
+    
+}
+
+
+
+
+
+
+.socials {
+    
+    
+    border-radius: 100px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    width: fit-content;
+    display: flex;
+    margin-right: 10px;
+   
+}
+
+
+.socials:hover {
+    box-shadow: 0px 0px 30px rgba(2, 2, 96, 0.578);
+}
+
+
+.dropdown {
+  position: relative;
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 10%; 
+  left: 0;
+  background: #4d4875;
+  min-width: 70px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 8px 12px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  
+}
+
+.dropdown-content li a:hover {
+  background:#302b63;
+  color: #4d4875;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  
+}
+
+.dropdown-content {
+  display: none;
+}
+
+.dropdown-content.show {
+  display: block;
+  border: solid;
+  border-color: #302b63;
+  border-radius: 10px;
+  margin-left: 5px;
+  margin-top: 15px;
+}
+
