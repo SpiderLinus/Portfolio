@@ -1,11 +1,11 @@
 @font-face {
     font-family: counthills;
-    src: url(/assets/fonts/Counthills.otf);
+    src: url(./assets/fonts/Counthills.otf);
 }
 
 @font-face {
     font-family: proxima;
-    src: url(/assets/fonts/proximanova_regular.ttf);
+    src: url(./assets/fonts/proximanova_regular.ttf);
 }
 
 * {
@@ -211,7 +211,7 @@ a:hover {
     /* Layered background: fade + image */
     background-image:
         linear-gradient(to top, transparent 80%, #dedede 100%),
-        url(/assets/41.svg);
+        url(./assets/41.svg);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
