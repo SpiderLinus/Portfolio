@@ -1,11 +1,11 @@
 @font-face {
     font-family: counthills;
-    src: url(/assets/fonts/Counthills.otf);
+    src: url(./assets/fonts/Counthills.otf);
 }
 
 @font-face {
     font-family: proxima;
-    src: url(/assets/fonts/proximanova_regular.ttf);
+    src: url(./assets/fonts/proximanova_regular.ttf);
 }
 
 * {
@@ -61,7 +61,7 @@ header, nav {
     border-radius: 10px 0px 10px 0px;
 }
 
-a {
+li a {
     font-family: proxima;
     color: white;
     letter-spacing: 1px;
@@ -72,8 +72,17 @@ a {
     opacity: 60%;
     margin: 0;
     padding: 30px;
+    font-weight: bold;
     
+    letter-spacing: 0px;
+    transition: letter-spacing 0.3s ease;
 }
+
+a:hover {
+    letter-spacing: 10px;
+}
+
+
 
 ul {
     margin: 0;
@@ -85,23 +94,29 @@ ul {
     justify-content: center;
 }
 
-.socials {
+#socials {
     
-    
-    border-radius: 100px;
-    padding-left: 5px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    padding-right: 5px;
-    width: fit-content;
     display: flex;
-    margin-right: 10px;
-   
+    flex-wrap: wrap;
+    
+    gap: 30px;
+
+    margin-left: 20px;
+
+    
+    
 }
 
+#socials img {
 
-.socials:hover {
-    box-shadow: 0px 0px 30px rgba(2, 2, 96, 0.578);
+    filter: grayscale(100%) brightness(60%);
+    transition: filter 0.3s ease;
+
+
+}
+
+#socials img:hover {
+    filter: grayscale(0%) brightness(100%);
 }
 
 
@@ -146,43 +161,21 @@ main {
     width: fit-content;
     justify-self: center;
 
-    
+    transition: letter-spacing 0.3s ease;
 
     
 
 }
 
-@keyframes flow {
-    from {
-        letter-spacing: 0;
-    }
-    to {
-        letter-spacing: 10px;
-    }
-    
-}
-
-@keyframes flows {
-    from {
-        letter-spacing: 10px;
-    }
-    to {
-        letter-spacing: 0px;
-    }
-}
 
 #spider:hover {
-    animation: flow ease 1s forwards;       
+   letter-spacing: 10px;  
 }
 
 #spider:hover::after {
     animation: flows ease-out 1s forwards;
 }
 
-a:hover {
-    animation: flow ease 500ms forwards; 
-    text-shadow: 0px 0px 10px rgb(133, 133, 133);
-}
 
 #sideblock {
     margin-top: 15px;
@@ -211,7 +204,7 @@ a:hover {
     /* Layered background: fade + image */
     background-image:
         linear-gradient(to top, transparent 80%, #dedede 100%),
-        url(/assets/41.svg);
+        url(./assets/41.svg);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
