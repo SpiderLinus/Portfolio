@@ -72,7 +72,14 @@ a {
     opacity: 60%;
     margin: 0;
     padding: 30px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    transition: letter-spacing 0.3s ease;
     
+}
+
+a:hover {
+    letter-spacing: 10px;
 }
 
 ul {
@@ -132,7 +139,7 @@ main {
     letter-spacing: 3px;
     font-weight: 300;
     justify-content: center;
-    background-image: url(lines.svg);
+    background-image: url(assets/icons/lines.svg);
     background-position: 0;
     background-size: 35rem;
     font-size: 7rem;
@@ -147,20 +154,11 @@ main {
     justify-self: center;
 
     
-
+    transition: letter-spacing 0.3s ease;
     
 
 }
 
-@keyframes flow {
-    from {
-        letter-spacing: 0;
-    }
-    to {
-        letter-spacing: 10px;
-    }
-    
-}
 
 @keyframes flows {
     from {
@@ -171,18 +169,11 @@ main {
     }
 }
 
+
 #spider:hover {
-    animation: flow ease 1s forwards;       
+    letter-spacing: 10px;
 }
 
-#spider:hover::after {
-    animation: flows ease-out 1s forwards;
-}
-
-a:hover {
-    animation: flow ease 500ms forwards; 
-    text-shadow: 0px 0px 10px rgb(133, 133, 133);
-}
 
 #sideblock {
     margin-top: 15px;
@@ -211,7 +202,7 @@ a:hover {
     /* Layered background: fade + image */
     background-image:
         linear-gradient(to top, transparent 80%, #dedede 100%),
-        url(/assets/41.svg);
+        url(/assets/icons/41.svg);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -268,4 +259,51 @@ a:hover {
     h1 {
         font-size: 4rem;
     }
+}
+
+#bottompage {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px 200px;
+    gap: 50px;
+    grid-template-rows: 100px 100px;
+}
+
+#aboutname {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: center;
+    justify-self: right;
+    color: #555;
+}
+
+#aboutline {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    justify-self: left;
+    color: #555;
+    border: solid;
+    
+    background-color: #555;
+    height: 1px;
+    width: 200px;
+}
+
+#aboutline2 {
+    grid-column: 5;
+    grid-row: 2;
+    align-self: center;
+    justify-self: right;
+    color: #555;
+    border: solid;
+    
+    background-color: #555;
+    height: 1px;
+    width: 200px;
+}
+
+.arrow {
+    rotate: 90deg;
+    justify-self: start;
+    
 }
